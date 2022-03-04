@@ -3,12 +3,15 @@ import java.util.Scanner;
 public class CafeApp {
 
     public static void main(String[] args) {
-        //creates three Product instances named "coffee", "espresso" and "cappuccino".
-        //Assign descriptions and prices to each product instance.
 
-        Product item1 = new Product("Coffee", 2.15, "Chocolaty");
-        Product item2 = new Product("Espresso", 2, "Foamy cream");
-        Product item3 = new Product("Cappuccino",2.75,"Rich structure");
+
+        //Rewrite the CafeApp class to utilize the Scanner class to accept orders for each product and, as before,
+        // print the name, description, quantity, and product subtotal for each item along with the sales subtotal,
+        // sales tax, and sales total.
+
+        Coffee item1 = new Coffee("Coffee", 2.2, "Chocolate",  true, false);
+        Espresso item2 = new Espresso("Espresso", 2, "Foamy", true, true);
+        Cappuccino item3 = new Cappuccino("Cappuccino", 2.75, "Rich", false, true);
 
 
         //Use the Scanner class to prompt the user for the quantity of each product
@@ -37,7 +40,7 @@ public class CafeApp {
         double salesTax =  totalSubtotal *.0625;
         double salesTotal = totalSubtotal + (1 + salesTax);
 
-        System.out.printf("\nSubtotal: $%.2f\nSales Tax: $%.2f\nSales Total: $$%.2f\n", totalSubtotal, salesTax, totalSubtotal);
+        System.out.printf("\nSubtotal: $%.2f\nSales Tax: $%.2f\nSales Total: $%.2f\n", totalSubtotal, salesTax, totalSubtotal);
 
 
 
